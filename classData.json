@@ -1,0 +1,38 @@
+{
+	"teachers":[
+		"Unbekannt",
+		"Frau J. Müller",
+		"Herr M. Geiss",
+		"Frau C. Fitschen",
+		"Frau D. Masuth",
+		"Frau Philips",
+		"Frau Kästner",
+		"Frau Litfin",
+		"Frau Kleinhans",
+		"Herr Sportlehrer",
+		"Frau Arns"
+	],
+	"subjects":[
+		["-/-","-/-",[0]],
+		["MA","Mathe",[1,2]],
+		["DE","Deutsch",[1]],
+		["EN","Englisch",[4,5]],
+		["CH","Chemie",[7]],
+		["GE","Geschichte",[2]],
+		["INF","Informartik",[10]],
+		["ORG","Orga/Verfügung",[1]],
+		["PHY","Physik",[1]],
+		["POL","Politik",[1]],
+		["REL","Religion",[3]],
+		["SPT","Sport",[9]],
+		["WIR","Wirtschaft",[1]],
+		["WPK","Kunst/Hauswirtschaft/Werken",[8,4,6]]
+	],
+	"timetable":[
+		[3, 1, 13, 7],
+		[2, 6, 4, 0],
+		[8, 11, 13, 0],
+		[10, 2, 3, 1],
+		[12, 1, 5, 0]
+	]
+}

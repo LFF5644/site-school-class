@@ -1,0 +1,6 @@
+table#timetable{
+	user-select: none;
+}
+table#timetable td.weekday{
+	cursor: pointer;
+}

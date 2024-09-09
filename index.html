@@ -1,0 +1,82 @@
+<?
+const {
+	importHead,
+}=globals.functions;
+
+const {getTimetable}=service_require("web/school/school");
+
+?><!DOCTYPE html>
+<html lang=de>
+<head>
+	<?=importHead({
+		input,
+		title: "Klasse 10 HSTO",
+		tabs: 1,
+		css:[
+			"/css/main.css",
+			"/web/school/style.css"
+		],
+		watchAllow: true,
+	})?>
+</head>
+<body>
+	<h1>Klasse 10 HSTO bei Fr. J. Müller</h1>
+	<h2>Stundenplan</h2><?	
+		
+	const timetable=getTimetable();
+		
+?>
+	<table border=1px id=timetable>
+		<tr>
+			<th>Stunden</th>
+			<th>Montag</th>
+			<th>Dienstag</th>
+			<th>Mittwoch</th>
+			<th>Donnerstag</th>
+			<th>Freitag</th>
+		</tr><?
+	for(let index=0; index<4; index+=1){
+?>
+		<tr>
+			<td><?=((index+1)*2)-1?> - <?=(index+1)*2?></td><?
+		for(let i=0; i<5; i+=1){
+?>
+			<td class="weekday d<?=i?>" title="<?=((index+1)*2)-1?>-<?=(index+1)*2?> Stunde <?=timetable[i][index][1]?> mit <?=timetable[i][index][2].join(', ')?>" onclick="alert('<?=((index+1)*2)-1?>-<?=(index+1)*2?> Stunde <?=timetable[i][index][1]?> mit <?=timetable[i][index][2].join(', ')?>');"><?=timetable[i][index][0]?></td><?
+		}
+?>
+		</tr><?
+	}
+?>
+	</table>
+
+	<h2>Hausaufgaben <a href=/web/school/data/HA-Tafel.jpg target=_blank>(Foto)</a></h2>
+	<ul>
+		<li><b>Mathe</b>: <a href=/web/school/data/matheTafelBildMueller_20240822.jpg target=_blank>Tafel-Foto</a> (Bis <span style="color:red;">Montag 09.09.2024</span>)
+			<ul>
+				<li><b>S.8</b> Nr. 7a, 7b, 9a, 9b, 10b, 10c, 12a, 12b</li>
+				<li><b>S.9</b> Nr. 13a, 13b, 14a, 14b, 16a, 17a, 18a, 19a, 20, 21c, 21d, 22a, 22b, 22c, 23a, 24a</li>
+				<li>Diese Aufgaben erledigen und mit Hilfe der <b>Lösungen ab S.145</b> kontrollieren!</li>
+				<li><b>S.98</b> Nr. 5-8 (unten)</li>
+
+			</ul>
+		</li>
+		<li><b>Englisch</b>: (Bis Donnerstag 12.09.2024)
+			<ul>
+				<li><b>Vokabeln S.177-178</b> Station 2 (und Alles davor)</li>
+				<li><b>Workbook S.11</b> Nr. 6</li>
+				<li>1 Minute Presentation</li>
+			</ul>
+		</li>
+		<li><b>Chemie</b>: (Bis Dienstag 10.09.2024)
+			<ul>
+				<li>Gefahrenzeichen (<a href=/web/school/data/gefahrensymbole_alt.png target=_blank>Foto</a>) auswendig Lernen (für Test)</li>
+				<li>Mappe fertig machen: Inhaltsverzeichnis und Deckblatt</li>
+			</ul>
+		</li>
+		<li><b>Physik</b>: <a href=/web/school/data/PhysikWP_20240906.JPG target=_blank>AB-Wochenplan</a> Nr. 2 (AB S.27 Nr. 1-6) (bis 11.09.2024)</li>
+
+
+	</ul>
+	<script defer src=app.js></script>
+</body>
+</html>
