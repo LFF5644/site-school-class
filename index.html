@@ -38,7 +38,7 @@ const {getTimetable}=service_require("web/school/school");
 	for(let index=0; index<4; index+=1){
 ?>
 		<tr>
-			<td><?=((index+1)*2)-1?> - <?=(index+1)*2?></td><?
+			<td class=hour><?=((index+1)*2)-1?> - <?=(index+1)*2?></td><?
 		for(let i=0; i<5; i+=1){
 ?>
 			<td class="weekday d<?=i?>" title="<?=((index+1)*2)-1?>-<?=(index+1)*2?> Stunde <?=timetable[i][index][1]?> mit <?=timetable[i][index][2].join(', ')?>" onclick="alert('<?=((index+1)*2)-1?>-<?=(index+1)*2?> Stunde <?=timetable[i][index][1]?> mit <?=timetable[i][index][2].join(', ')?>');"><?=timetable[i][index][0]?></td><?
@@ -49,15 +49,23 @@ const {getTimetable}=service_require("web/school/school");
 ?>
 	</table>
 
+	<h2>Klausuren/Arbeiten</h2>
+	<ul>
+		<li><b>Mathe (E-Kurs)</b> - <span>16.09.2024</span> <a href=/SquareNumber target=_blank>(hier üben)</a></li>
+		<li><b>Englisch (Beide Kurse)</b> - <span>26.09.2024</span> <a href=/Vocabulary target=_blank>(hier üben)</a></li>
+		<li><b>Deutsch</b> - <span>01.10.2024</span></li>
+		<li><b>Physik</b> - <span>02.10.2024</span></li>
+	</ul>
+
 	<h2>Hausaufgaben <a href=/web/school/data/HA-Tafel.jpg target=_blank>(Foto)</a></h2>
 	<ul>
-		<li><b>Mathe</b>: (Bis Donnerstag 12.09.2024)
+		<li><b>Mathe</b>: (Bis <span class=red>Donnerstag</span> 12.09.2024)
 			<ul>
 				<li><b>S.98</b> Nr. 5-8 (unten)</li>
 				<li><a href="/web/school/data/MatheTafelaufgaben.jpg" target=_blank>Tafelaufgaben</a> Beenden</li>
 			</ul>
 		</li>
-		<li><b>Englisch</b>: <a href="/web/school/data/EnglischMerke.jpg" target=_blank>Tafel-Merk-Foto</a> (Bis Donnerstag 12.09.2024)
+		<li><b>Englisch</b>: <a href="/web/school/data/EnglischMerke.jpg" target=_blank>Tafel-Merk-Foto</a> (Bis <span class=warn>Donnerstag</span> 12.09.2024)
 			<ul>
 				<li><b>Vokabeln S.177-178</b> Station 2 (und Alles davor)</li>
 				<li><b>Workbook S.11</b> Nr. 6</li>
@@ -65,13 +73,7 @@ const {getTimetable}=service_require("web/school/school");
 				<li>Latter of Protest fertig Schreiben</li>
 			</ul>
 		</li>
-		<li><b>Chemie</b>: (Bis Dienstag 10.09.2024)
-			<ul>
-				<li>Gefahrenzeichen (<a href=/web/school/data/gefahrensymbole_alt.png target=_blank>Foto</a>) auswendig Lernen (für Test)</li>
-				<li>Mappe fertig machen: Inhaltsverzeichnis und Deckblatt</li>
-			</ul>
-		</li>
-		<li><b>Physik</b>: <a href=/web/school/data/PhysikWP_20240906.JPG target=_blank>AB-Wochenplan</a> Nr. 2 (AB S.27 Nr. 1-6) (bis 11.09.2024)</li>
+		<li><b>Physik</b>: <a href=/web/school/data/PhysikWP_20240906.JPG target=_blank>Wochenplan</a> Nr. 1-9 (bis einschließlich Aufgabe 9) (bis Mittwoch 18.09.2024)</li>
 
 
 	</ul>

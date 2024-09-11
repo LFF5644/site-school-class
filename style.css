@@ -4,3 +4,12 @@ table#timetable{
 table#timetable td.weekday{
 	cursor: pointer;
 }
+table#timetable td.weekday:hover{
+	color: blue;
+}
+table#timetable td.weekday:active{
+	color: red;
+}
+.warn{
+	color:red;
+}
