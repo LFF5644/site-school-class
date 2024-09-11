@@ -1,7 +1,10 @@
 <?
 const {
 	importHead,
+	allowedPath,
 }=globals.functions;
+
+allowedPath({request,response},"/school-class");
 
 const {getTimetable}=service_require("web/school/school");
 
