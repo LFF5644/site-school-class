@@ -13,14 +13,22 @@ const {getTimetable}=service_require("web/school/school");
 <head>
 	<?=importHead({
 		input,
+		robots: true,
 		title: "Klasse 10 HSTO",
+		icons:{
+			"640x640": "https://symbl-world.akamaized.net/i/webp/f5/f6918df7b639080a618e248db22d6c.webp",
+		},
+		manifest: "/web/school/manifest.json",
 		tabs: 1,
 		css:[
 			"/css/main.css",
-			"/web/school/style.css"
+			"/web/school/style.css",
 		],
-		watchAllow: true,
 	})?>
+	<meta name=mobile-web-app-capable content=yes>
+	<meta name=apple-mobile-web-app-capable content=yes>
+	<meta name=apple-mobile-web-app-title content=Klassen-Infos>
+	<link rel=apple-touch-icon sizes=640x640 href=https://symbl-world.akamaized.net/i/webp/f5/f6918df7b639080a618e248db22d6c.webp>
 </head>
 <body>
 	<h1>Klasse 10 HSTO bei Fr. J. Müller</h1>
@@ -54,7 +62,7 @@ const {getTimetable}=service_require("web/school/school");
 
 	<h2>Klausuren/Arbeiten</h2>
 	<ul>
-		<li><b>Mathe (E-Kurs)</b> - <span>16.09.2024</span> <a href=/SquareNumber target=_blank>(hier üben)</a></li>
+		<li><b>Mathe</b> - <span style=color:green>(Warten auf Noten)</span></li>
 		<li><b>Englisch (Beide Kurse)</b> - <span>26.09.2024</span> <a href=/Vocabulary target=_blank>(hier üben)</a></li>
 		<li><b>Deutsch</b> - <span>01.10.2024</span></li>
 		<li><b>Physik</b> - <span>02.10.2024</span></li>
@@ -78,9 +86,7 @@ const {getTimetable}=service_require("web/school/school");
 		</li>
 		<li><b>Deutsch</b>: <a href=/web/school/data/Deutsch-S.32-A1-A2.JPG target=_blank>S.32 A1-A2</a> und <a href=/web/school/data/Deutsch-S.33-A3-A5.JPG target=_blank>S.33 A3-A5</a></li>
 		<li><b>Physik</b>: <a href=/web/school/data/PhysikWP_20240906.JPG target=_blank>Wochenplan</a> Nr. 1-9 (bis einschließlich Aufgabe 9) (bis Mittwoch 18.09.2024)</li>
-
-
 	</ul>
-	<script defer src=app.js></script>
+	<script defer src=/web/school/app.js></script>
 </body>
 </html>

@@ -1,0 +1,17 @@
+{
+	"name": "Klassen-Infos",
+	"short_name": "Klassen-Infos",
+	"description": "Hausaufgaben, Klassenarbeiten, usw aufgelistet",
+	"icons": [
+	  {
+		"src": "https://symbl-world.akamaized.net/i/webp/f5/f6918df7b639080a618e248db22d6c.webp",
+		"type": "image/webp",
+		"sizes": "640x640 any"
+	  }
+	],
+	"start_url": "https://lff.one/school-class/?type=app",
+	"scope": "https://lff.one/school-class/",
+	"display": "standalone",
+	"background_color": "#103",
+	"theme_color": "#103"
+  }
